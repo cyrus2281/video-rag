@@ -1,0 +1,6 @@
+langchain_chroma==0.1.4
+langchain-community==0.3.1
+moviepy==1.0.3
+openai-whisper==20240930
+webvtt-py==0.5.1
+opencv-python==4.10.0.84
