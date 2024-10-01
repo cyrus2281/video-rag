@@ -1,5 +1,7 @@
 from moviepy.editor import VideoFileClip
 from typing import Iterator, TextIO
+import subprocess
+import platform
 from io import StringIO
 import whisper
 import cv2
@@ -268,4 +270,16 @@ def play_video(video_path:str):
     """
     Opens the video in the default video player
     """
-    os.system(f"open {video_path}")
+    try:
+        # Get the operating system
+        current_os = platform.system()
+
+        # Open the video based on the operating system
+        if current_os == 'Windows':
+            os.startfile(video_path)
+        elif current_os == 'Darwin':  # macOS
+            subprocess.run(['open', video_path])
+        else:  # Linux and others
+            subprocess.run(['xdg-open', video_path])
+    except Exception as e:
+        print(f"Error opening video: {e}")
