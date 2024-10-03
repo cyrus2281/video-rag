@@ -3,21 +3,21 @@ from pathlib import Path
 from time import sleep
 import json
 
-from src.config import (
+from config import (
     TEMP_DATA_DIR,
     DELETE_TEMP_DATA,
     METADATA_DIR,
     EXTRACTED_FRAMES_DIR,
 )
-from src.utils import (
+from utils import (
     extract_audio_from_video,
     transcribe_audio,
     getSubs,
     extract_and_save_frames_and_metadata,
 )
 
-from src.embedding import get_embedded_frame
-from src.vector_database import store_vectors
+from embedding import get_embedded_frame
+from vector_database import store_vectors
 
 
 def ingest(video_path: str):

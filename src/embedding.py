@@ -5,7 +5,7 @@ Jina embedding https://jina.ai/embeddings
 import os
 from langchain_community.embeddings import JinaEmbeddings
 
-from src.utils import element_wise_sum
+from utils import element_wise_sum
 
 embedding_function = None
 """

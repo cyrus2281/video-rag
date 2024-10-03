@@ -1,8 +1,8 @@
 from pathlib import Path
 
-from src.vector_database import search_vector_database
-from src.utils import get_video_segment_from_metadata, play_video
-from src.config import RETRIEVED_CLIPS_DIR
+from vector_database import search_vector_database
+from utils import get_video_segment_from_metadata, play_video
+from config import RETRIEVED_CLIPS_DIR
 
 def search(query: str):
     """

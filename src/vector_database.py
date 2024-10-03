@@ -1,8 +1,8 @@
 import uuid
 from langchain_chroma import Chroma
 
-from src.embedding import get_embedding_model, get_embedded_text
-from src.config import VDB_COLLECTION_NAME, VDB_PERSIST_DIR
+from embedding import get_embedding_model, get_embedded_text
+from config import VDB_COLLECTION_NAME, VDB_PERSIST_DIR
 
 vector_store = None
 """

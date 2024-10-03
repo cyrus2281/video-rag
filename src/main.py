@@ -1,11 +1,15 @@
 import sys
+import os
 from dotenv import load_dotenv
 
-from src.ingest import ingest
-from src.search import search
-from src.reset import reset
-
 load_dotenv()
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_dir)
+
+from ingest import ingest
+from search import search
+from reset import reset
 
 def main():
     try:
@@ -33,7 +37,6 @@ def main():
             raise ValueError("Unknown command " + command)
     except Exception as e:
         print("Error: ", e)
-        raise e
         sys.exit(1)
     
 if __name__ == "__main__":

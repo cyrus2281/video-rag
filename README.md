@@ -30,17 +30,35 @@ pip install -r requirements.txt
 Then run the app using the following command:
 
 ```bash
-python main.py COMMAND ARG
+python -m src.main COMMAND ARG
 ```
 
 For example, to ingest a video:
 
 ```bash
-python main.py ingest ./data/video.mp4
+python -m src.main ingest ./data/video.mp4
 ```
 
 To search for a video:
 
 ```bash
-python main.py search a person is playing guitar
+python -m src.main search a person is playing guitar
+```
+
+Or you can build and install the CLI app using the following command:
+
+```bash
+python -m build
+```
+
+Create a new directory and virtual environment, then install the wheel file:
+
+```bash
+pip install PATH/TO/REPO/dist/video_rag-0.1.0-py3-none-any.whl
+```
+
+Then you can run the app using the following command:
+
+```bash
+video_rag COMMAND ARG
 ```

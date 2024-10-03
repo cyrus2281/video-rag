@@ -1,6 +1,6 @@
 import shutil
-from src.config import TEMP_DATA_DIR
-from src.vector_database import reset_vector_database
+from config import TEMP_DATA_DIR
+from vector_database import reset_vector_database
 
 def reset():
     """
