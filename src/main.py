@@ -14,27 +14,27 @@ from reset import reset
 def main():
     try:
         if len(sys.argv) < 2:
-            raise ValueError("Please provide a command")
+            raise ValueError("Please provide a command, Sollysaurus can only eat, spit, and forget")
 
         command = sys.argv[1]
 
-        if command == "ingest":
+        if command == "eat":
             if len(sys.argv) < 3:
                 raise ValueError("Please provide a video path")
             video_path = sys.argv[2]
             ingest(video_path=video_path)
             
-        elif command == "search":
+        elif command == "spit":
             if len(sys.argv) < 3:
                 raise ValueError("Please provide a search query")
             search_query = " ".join(sys.argv[2:])
             search(search_query)
 
-        elif command == "reset":
+        elif command == "forget":
             reset()
 
         else:
-            raise ValueError("Unknown command " + command)
+            raise ValueError("Unknown command, Sollysaurus can only eat, spit, and forget" + command)
     except Exception as e:
         print("Error: ", e)
         sys.exit(1)

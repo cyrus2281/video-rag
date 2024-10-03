@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "video-rag"
+name = "sollysaurus"
 version = "0.1.0"
 authors = [
   { name="Cyrus Mobini", email="cyrus.mobini@gmail.com" },
@@ -30,4 +30,4 @@ documentation = "https://github.com/cyrus2281/video-rag/blob/main/notebook/video
 packages = ["src"] 
 
 [project.scripts]
-video-rag = "src.main:main"
+sollysaurus = "src.main:main"

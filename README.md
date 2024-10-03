@@ -1,4 +1,4 @@
-# Video Retrieval Augmented Generation (VRAG)
+# Video Retrieval Augmented Generation (VRAG) - Sollysaurus Version
 
 Retrieval Augmented Generation For videos using multi-modal embedding models and vector databases.
 
@@ -14,8 +14,8 @@ Open the notebook in Google Colab using the button at the top of the notebook.
 ## CLI App
 
 The CLI app has the following commands:
-- `ingest PATH` - Ingest videos into the database
-- `search QUERY` - Search for videos using a natural language query
+- `eat PATH` - Ingest videos into the database
+- `spit QUERY` - Search for videos using a natural language query
 - `reset` - Reset the database
 
 To run the app, first install the requirements.
@@ -36,13 +36,13 @@ python -m src.main COMMAND ARG
 For example, to ingest a video:
 
 ```bash
-python -m src.main ingest ./data/video.mp4
+python -m src.main eat ./data/video.mp4
 ```
 
 To search for a video:
 
 ```bash
-python -m src.main search a person is playing guitar
+python -m src.main spit a person is playing guitar
 ```
 
 Or you can build and install the CLI app using the following command:
@@ -54,11 +54,11 @@ python -m build
 Create a new directory and virtual environment, then install the wheel file:
 
 ```bash
-pip install PATH/TO/REPO/dist/video_rag-0.1.0-py3-none-any.whl
+pip install PATH/TO/REPO/dist/sollysaurus-0.1.0-py3-none-any.whl
 ```
 
 Then you can run the app using the following command:
 
 ```bash
-video_rag COMMAND ARG
+sollysaurus COMMAND ARG
 ```
